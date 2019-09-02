@@ -5,6 +5,6 @@
 
 size_t	ft_strlen(char *str);
 void	ft_putstr(char *str);
-char	*strcpy(char *dest, const char *src);
+char	*ft_strcpy(char *dest, const char *src);
 
 #endif
