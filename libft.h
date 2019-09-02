@@ -10,6 +10,8 @@ int     ft_strcmp(const char *str1, const char *str2);
 int     ft_strncmp(const char *str1, const char *str2, size_t n);
 int     ft_toupper(char c);
 int     ft_tolower(char c);
+char	*ft_strncpy(char *dest, const char *src, size_t n)
+
 
 
 
