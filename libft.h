@@ -13,4 +13,5 @@ int     ft_tolower(char c);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
 char    *ft_strdup(const char *src);
 char    *ft_strcat(char *dest, const char *src);
+char    *ft_strncat(char *dest, const char *src, size_t n);
 #endif
