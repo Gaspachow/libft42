@@ -19,6 +19,9 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 char    *ft_strchr(const char *str, int c);
 char    *ft_strrchr(const char *str, int c);
 int     ft_isascii(int c);
+char    *ft_strstr(const char *haystack, const char *needle);
+char    *ft_strnstr(const char *haystack, const char *needle, size_t size);
+
 
 
 #endif
