@@ -4,3 +4,4 @@ maintest.c
 *.out
 *.gch
 *.a
+*.o
