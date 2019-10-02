@@ -23,6 +23,7 @@ char    *ft_strstr(const char *haystack, const char *needle);
 char    *ft_strnstr(const char *haystack, const char *needle, size_t size);
 void    *ft_memset(void *ptr, int c, size_t len);
 void    ft_bzero(void *str, size_t n);
+int     ft_isprint(int c);
 
 
 
