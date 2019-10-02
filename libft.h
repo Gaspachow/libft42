@@ -21,7 +21,7 @@ char    *ft_strrchr(const char *str, int c);
 int     ft_isascii(int c);
 char    *ft_strstr(const char *haystack, const char *needle);
 char    *ft_strnstr(const char *haystack, const char *needle, size_t size);
-
+void    *ft_memset(void *ptr, int c, size_t len);
 
 
 #endif
