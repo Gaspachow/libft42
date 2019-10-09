@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gsmets <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 11:37:51 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/07 11:37:52 by gsmets           ###   ########.fr       */
+/*   Created: 2019/10/09 17:29:17 by gsmets            #+#    #+#             */
+/*   Updated: 2019/10/09 17:43:50 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include <unistd.h>
+
+void	ft_putchar(char c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	else
-		return (c);
+	write(1, (unsigned char *)&c, 1);
 }

@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsmets <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 11:33:15 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/07 11:33:26 by gsmets           ###   ########.fr       */
+/*   Created: 2019/10/07 15:00:46 by gsmets            #+#    #+#             */
+/*   Updated: 2019/10/07 15:00:48 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+int	ft_atoi(const char *str)
 {
-	size_t	len;
+	long int	n;
+	int			sign;
 
-	len = ft_strlen(needle);
-	if (!(*needle))
-		return ((char *)haystack);
-	while (*haystack)
+	n = 0;
+	sign = 1;
+	while ((*str <= 13 && *str >= 9) || *str == 32)
+		str++;
+	if (*str == '-')
 	{
-		if (ft_strncmp(haystack, needle, len) != 0)
-			haystack++;
-		else
-			return ((char *)haystack);
+		sign = -1;
+		str++;
 	}
-	return (NULL);
+	else if (*str == '+')
+		str++;
+	while (*str)
+	{
+		if (*str >= '0' && *str <= '9')
+			n = n * 10 + (*str++ - '0');
+		else
+			break ;
+	}
+	return ((int)(n * sign));
 }

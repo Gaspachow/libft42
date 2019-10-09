@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 11:26:23 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/08 18:25:48 by gsmets           ###   ########.fr       */
+/*   Created: 2019/10/08 10:07:31 by gsmets            #+#    #+#             */
+/*   Updated: 2019/10/08 10:59:25 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+char	*ft_substr(char const *str, unsigned int index, size_t len)
 {
-	size_t i;
+	char	*new;
+	size_t	j;
 
-	if (!dest || !src)
-		return (0);
-	if (!size)
-		return (ft_strlen(src));
-	i = 0;
-	while (src[i] && i + 1 < size)
+	if (!(new = malloc((len + 1) * sizeof(char))))
+		return (NULL);
+	j = 0;
+	while (len-- && str[index])
 	{
-		dest[i] = src[i];
-		i++;
+		new[j] = str[index];
+		j++;
+		index++;
 	}
-	dest[i] = '\0';
-	while (src[i])
-		i++;
-	return (i);
+	new[j] = '\0';
+	return (new);
 }
