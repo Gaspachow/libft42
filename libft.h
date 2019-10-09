@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:25:57 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/09 17:07:44 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/10/09 18:24:40 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *str, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *str, char (*f)(unsigned int, char));
+void	ft_putchar(char c);
+void	ft_putchar_fd(char c, int fd);
 #endif
