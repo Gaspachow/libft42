@@ -6,27 +6,43 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 18:51:12 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/09 19:18:37 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/10/10 11:41:59 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+size_t	getputnbrlen(long int n)
+{
+	size_t	i;
+
+	i = 1;
+	while (n /= 10)
+		i++;
+	return (i);
+}
+
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	c;
-	char	next_n;
+	long int	num;
+	size_t		len;
+	int			div;
+	char		c;
 
-	if (n < 10)
+	num = n;
+	div = 1;
+	if (n < 0)
 	{
-		c = n + '0';
-		write(fd, &c, 1);
-		return ;
+		num = -num;
+		write(fd, "-", 1);
 	}
-	next_n = n / 10;
-	while (n > 10)
-		n /= 10;
-	c = n + '0';
-	write(fd, &c, 1);
-	ft_putnbr_fd(next_n, fd);
+	len = getputnbrlen(num);
+	while (--len)
+		div *= 10;
+	while (div)
+	{
+		c = ((num / div) % 10) + '0';
+		write(fd, &c, 1);
+		div /= 10;
+	}
 }
