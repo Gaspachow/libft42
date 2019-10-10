@@ -26,5 +26,5 @@ fclean: clean
 
 re: fclean all
 
-.c.o:
+%.o: %.c
 	$(GCC) $(FLAGS) $(INCLUDEH) -c $<  -o $(<:.c=.o)
