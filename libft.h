@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:25:57 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/10 12:27:39 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/10/10 15:31:10 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,6 @@ void			ft_putstr_fd(char *str, int fd);
 void			ft_putendl_fd(char *str, int fd);
 void			ft_putnbr_fd(int n, int fd);
 t_list			*ft_lstnew(void *content);
-
+void			ft_lstadd_front(t_list **alst, t_list *new);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 14:24:26 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/10 14:39:55 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/10/10 15:31:24 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	
+	if (!alst || !new || !*alst)
+		return ;
+	new->next = *alst;
+	*alst = new;
 }
