@@ -30,4 +30,4 @@ re: fclean all
 	$(GCC) $(FLAGS) $(INCLUDEH) -c $<  -o $(<:.c=.o)
 
 bench:
-    $(GCC) ${FLAGS} -shared -o libft.so -fPIC ft_*.c
+	$(GCC) ${FLAGS} -shared -o libft.so -fPIC $(SRCS)
