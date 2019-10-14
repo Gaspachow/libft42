@@ -36,7 +36,7 @@ $(NAME):	$(OBJS)
 
 $(BONUS):	$(B_OBJS)
 	ar -rcs $(NAME) $(B_OBJS)
-	touch bonus_created
+	@touch bonus_created
 
 clean:
 	rm -f $(OBJS)
