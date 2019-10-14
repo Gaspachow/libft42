@@ -15,7 +15,7 @@ B_OBJS	= $(B_SRCS:.c=.o)
 
 NAME	= libft.a
 
-BONUS	= bonus
+BONUS	= bonus_created
 
 GCC		= gcc
 
@@ -36,6 +36,7 @@ $(NAME):	$(OBJS)
 
 $(BONUS):	$(B_OBJS)
 	ar -rcs $(NAME) $(B_OBJS)
+	touch bonus_created
 
 clean:
 	rm -f $(OBJS)
@@ -44,7 +45,7 @@ fclean: clean
 	rm -f $(NAME)
 
 bfclean: bclean
-	rm -f $(BONUS)
+	rm -f $(BONUS) $(NAME)
 
 bclean:
 	rm -f $(B_OBJS)
