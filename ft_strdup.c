@@ -6,19 +6,33 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:17:36 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/11 15:05:39 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/10/15 16:12:16 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+char	*ft_strdupcpy(char *dest, const char *src)
+{
+	int i;
+
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
 char	*ft_strdup(const char *src)
 {
 	char *dest;
 
-	dest = malloc(ft_strlen(src) + 1);
+	dest = malloc((ft_strlen(src) + 1) * sizeof(char));
 	if (dest == NULL)
 		return (NULL);
-	ft_strcpy(dest, src);
+	ft_strdupcpy(dest, src);
 	return (dest);
 }
