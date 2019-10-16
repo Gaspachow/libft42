@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 16:41:47 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/09 18:27:26 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/10/16 14:14:59 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 	char			*newstr;
 	unsigned int	i;
 
-	if (!str)
+	if (!str || !f)
 		return (NULL);
 	len = ft_strlen(str);
 	if (!(newstr = malloc((len + 1) * sizeof(char))))
