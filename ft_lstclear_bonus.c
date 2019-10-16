@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 18:28:37 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/11 13:35:38 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/10/16 11:43:20 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*tmp;
 	t_list	*tmp2;
 
+	if (!lst || !*lst || !del)
+		return ;
 	tmp = *lst;
 	tmp2 = tmp;
 	while (tmp)

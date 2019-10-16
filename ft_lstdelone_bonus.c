@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 16:59:04 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/11 16:23:42 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/10/16 11:43:52 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst && del)
+	{
 		(*del)((void *)lst->content);
-	free(lst);
+		free(lst);
+	}
 }
