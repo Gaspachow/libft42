@@ -6,13 +6,13 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 17:05:09 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/15 16:48:21 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/10/17 11:22:54 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	stringcount(char const *str, char c)
+static size_t	stringcount(char const *str, char c)
 {
 	int i;
 
@@ -29,7 +29,7 @@ size_t	stringcount(char const *str, char c)
 	return (i);
 }
 
-char	*newsplit(char const *str, char c)
+static char		*newsplit(char const *str, char c)
 {
 	size_t	i;
 	char	*ptr;
@@ -44,7 +44,7 @@ char	*newsplit(char const *str, char c)
 	return (ptr);
 }
 
-char	**ft_split(char const *str, char c)
+char			**ft_split(char const *str, char c)
 {
 	char	**tab;
 	size_t	count;

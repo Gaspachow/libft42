@@ -6,13 +6,13 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 12:52:10 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/08 18:23:58 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/10/17 11:21:48 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_setcheck(char const c, char const *set)
+static int	ft_setcheck(char const c, char const *set)
 {
 	while (*set)
 	{
@@ -24,7 +24,7 @@ int		ft_setcheck(char const c, char const *set)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
 	char	*new;
 	size_t	newlen;

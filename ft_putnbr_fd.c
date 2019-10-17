@@ -6,13 +6,13 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 18:51:12 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/10 11:41:59 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/10/17 11:19:56 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-size_t	getputnbrlen(long int n)
+static size_t	getputnbrlen(long int n)
 {
 	size_t	i;
 
@@ -22,7 +22,7 @@ size_t	getputnbrlen(long int n)
 	return (i);
 }
 
-void	ft_putnbr_fd(int n, int fd)
+void			ft_putnbr_fd(int n, int fd)
 {
 	long int	num;
 	size_t		len;

@@ -6,13 +6,13 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 14:21:15 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/09 16:02:31 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/10/17 11:19:07 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	getitoalen(long n)
+static size_t	getitoalen(long n)
 {
 	size_t	i;
 
@@ -27,7 +27,7 @@ size_t	getitoalen(long n)
 	return (i);
 }
 
-int		itoa_divpow(long n)
+static int		itoa_divpow(long n)
 {
 	int	div;
 
@@ -39,7 +39,7 @@ int		itoa_divpow(long n)
 	return (div);
 }
 
-void	itoa_assign(char *str, size_t len, int div, long n)
+static void		itoa_assign(char *str, size_t len, int div, long n)
 {
 	size_t	i;
 
@@ -58,7 +58,7 @@ void	itoa_assign(char *str, size_t len, int div, long n)
 	str[i] = '\0';
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	size_t	len;
 	char	*str;

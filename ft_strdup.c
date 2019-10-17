@@ -6,13 +6,13 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:17:36 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/15 16:12:16 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/10/17 11:21:02 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdupcpy(char *dest, const char *src)
+static char	*ft_strdupcpy(char *dest, const char *src)
 {
 	int i;
 
@@ -26,7 +26,7 @@ char	*ft_strdupcpy(char *dest, const char *src)
 	return (dest);
 }
 
-char	*ft_strdup(const char *src)
+char		*ft_strdup(const char *src)
 {
 	char *dest;
 
