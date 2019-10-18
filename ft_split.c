@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 17:05:09 by gsmets            #+#    #+#             */
-/*   Updated: 2019/10/17 11:22:54 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/10/18 16:54:26 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static size_t	stringcount(char const *str, char c)
 	int i;
 
 	i = 1;
-	while (*str == c)
+	while (*str == c && *str)
 		str++;
 	if (!(*str))
 		return (0);
