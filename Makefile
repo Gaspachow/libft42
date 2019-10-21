@@ -29,7 +29,7 @@ INCLUDEH	= -I libft.h
 
 
 
-all:	$(BONUS)
+all:	$(NAME)
 
 bonus: $(BONUS)
 
