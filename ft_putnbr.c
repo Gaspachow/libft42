@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 18:51:12 by gsmets            #+#    #+#             */
-/*   Updated: 2019/11/08 14:56:16 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/11/08 15:07:16 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static size_t	getputnbrlen(long int n)
 	return (i);
 }
 
-void			ft_putnbr(int n, int fd)
+void			ft_putnbr(int n)
 {
 	long int	num;
 	size_t		len;

@@ -6,7 +6,7 @@
 /*   By: gsmets <gsmets@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:25:57 by gsmets            #+#    #+#             */
-/*   Updated: 2019/11/08 14:56:10 by gsmets           ###   ########.fr       */
+/*   Updated: 2019/11/08 15:07:21 by gsmets           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,6 @@ void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *l, void *(*f)(void *), void (*d)(void *));
-void			ft_putnbr(int n, int fd);
+void			ft_putnbr(int n);
 
 #endif
